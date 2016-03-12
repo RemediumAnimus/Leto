@@ -1,8 +1,11 @@
+
 $(document).ready(function() {
+	
+ jQuery.scrollSpeed(100, 800);
 	
  FastClick.attach(document.body);
  
- $('.n-section6__btn').click(function(){
+ /*$('.n-section6__btn').click(function(){
  	$('.n-section6__items').css('height','auto'); 
  	$('.n-section6__bg').parallax('destroy');
  	$('.n-section6__bg').parallax({
@@ -13,7 +16,7 @@ $(document).ready(function() {
 	  	msieFix: true,
 	  	androidFix: true
 	  });	
- });
+ });*/
  
  var effectReady = false;
  var effectTimer;
@@ -275,125 +278,31 @@ $(document).ready(function() {
 	    		}	    	
 	    	}	    	
 	    },
+	    onTouchMove: function(swiper, event) {
+	    	console.log(swiper.translate);
+	    },
 	    onTransitionStart: function(swiper) {
-			console.log(swiper.translate);
+			
 		},  
 	  }); 
   }
   
-  slider5_1.setWrapperTranslate(100);
+  //slider5_1.setWrapperTranslate(350);
+  var controller = new ScrollMagic.Controller({
+  	globalSceneOptions: {
+		triggerHook: 'onLeave'
+	}
+  });
+  var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 700})
+  .setPin("#pin1")
+  .addIndicators()
+  .addTo(controller);
   
-  if (bowser.msie) {
-    var slider5_2 = new Swiper('.slider2',{
-	  	spaceBetween: 880,
-	  	speed: 500,	  	
-	  	loop: true,
-	  	pagination: '.slider2pag',
-        paginationClickable: true,	  	
-	    runCallbacksOnInit: false,
-	  	onSlideChangeStart: function() {
-	    	$('.slider2pic').find('img').stop().animate({'opacity':0},'slow');
-	    },
-	    onSlideChangeEnd: function(swiper) {
-	    	for (var i=0; i<swiper.slides.length; i++) {
-	    		var length = swiper.slides[i].className.split(' ').length;
-	    		var slide = swiper.slides[i].className.split(' ')[length-1];
-	    		if (slide == "swiper-slide-active") {
-	    			var src = swiper.slides[i].getAttribute('data-pic');
-	    			$('.slider2pic').find('img').attr('src',src);
-	    			$('.slider2pic').find('img').stop().animate({'opacity':1},'slow');
-	    		}	    	
-	    	}	    	
-	    }
-	    
-	  }); 
-  }  else {
-	  var slider5_2 = new Swiper('.slider2',{
-	  	spaceBetween: 180,
-	  	speed: 500,
-	  	effect: 'cube',
-	  	cube: {
-	         shadow: false,
-	         slideShadows: false,
-	         shadowOffset: 20,
-	         shadowScale: 0.94
-	    },
-	  	loop: true,
-	  	pagination: '.slider2pag',
-        paginationClickable: true,	  	
-	    runCallbacksOnInit: false,
-	    onSlideChangeStart: function() {
-	    	$('.slider2pic').find('img').stop().animate({'opacity':0},'slow');
-	    },
-	    onSlideChangeEnd: function(swiper) {
-	    	for (var i=0; i<swiper.slides.length; i++) {
-	    		var length = swiper.slides[i].className.split(' ').length;
-	    		var slide = swiper.slides[i].className.split(' ')[length-1];
-	    		if (slide == "swiper-slide-active") {
-	    			var src = swiper.slides[i].getAttribute('data-pic');
-	    			$('.slider2pic').find('img').attr('src',src);
-	    			$('.slider2pic').find('img').stop().animate({'opacity':1},'slow');
-	    		}	    	
-	    	}	    	
-	    }  
-	  }); 
-  }
+  scene.on('progress',function(event) {
+  	console.log(event.progress);
+  });
   
-  if (bowser.msie) {
-    var slider5_3 = new Swiper('.slider3',{
-	  	spaceBetween: 880,
-	  	speed: 500,	  	
-	  	loop: true,
-	  	pagination: '.slider3pag',
-        paginationClickable: true,	  	
-	    runCallbacksOnInit: false,
-	  	onSlideChangeStart: function() {
-	    	$('.slider3pic').find('img').stop().animate({'opacity':0},'slow');
-	    },
-	    onSlideChangeEnd: function(swiper) {
-	    	for (var i=0; i<swiper.slides.length; i++) {
-	    		var length = swiper.slides[i].className.split(' ').length;
-	    		var slide = swiper.slides[i].className.split(' ')[length-1];
-	    		if (slide == "swiper-slide-active") {
-	    			var src = swiper.slides[i].getAttribute('data-pic');
-	    			$('.slider3pic').find('img').attr('src',src);
-	    			$('.slider3pic').find('img').stop().animate({'opacity':1},'slow');
-	    		}	    	
-	    	}	    	
-	    }
-	    
-	  }); 
-  }  else {
-	  var slider5_3 = new Swiper('.slider3',{
-	  	spaceBetween: 180,
-	  	speed: 500,
-	  	effect: 'cube',
-	  	cube: {
-	         shadow: false,
-	         slideShadows: false,
-	         shadowOffset: 20,
-	         shadowScale: 0.94
-	    },
-	  	loop: true,
-	  	pagination: '.slider3pag',
-        paginationClickable: true,	  	
-	    runCallbacksOnInit: false,
-	    onSlideChangeStart: function() {
-	    	$('.slider3pic').find('img').stop().animate({'opacity':0},'slow');
-	    },
-	    onSlideChangeEnd: function(swiper) {
-	    	for (var i=0; i<swiper.slides.length; i++) {
-	    		var length = swiper.slides[i].className.split(' ').length;
-	    		var slide = swiper.slides[i].className.split(' ')[length-1];
-	    		if (slide == "swiper-slide-active") {
-	    			var src = swiper.slides[i].getAttribute('data-pic');
-	    			$('.slider3pic').find('img').attr('src',src);
-	    			$('.slider3pic').find('img').stop().animate({'opacity':1},'slow');
-	    		}	    	
-	    	}	    	
-	    }  
-	  }); 
-  }
+  //console.log(scene.progress());
   
   
   var slider6 = new Swiper('.n-section8__slider__container',{
@@ -417,9 +326,7 @@ $(document).ready(function() {
   	});*/
   });
   
-  /*$(document).tooltip({
-  	position: { my: "center bottom+50", at: "center bottom" }, 	
-  });*/
+  
  $('.popup').tooltipster({
  	interactive: true,
  	position: "bottom"

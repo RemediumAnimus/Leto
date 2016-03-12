@@ -26,6 +26,9 @@
 	<script src="js/vendor/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 	<script src="js/vendor/parallax.js-1.4.2/parallax.js"></script>
 	<script src="js/vendor/tooltipster/jquery.tooltipster.min.js"></script>
+	<script src="js/vendor/mousewheel/jQuery.scrollSpeed.js"></script>
+	<script src="js/vendor/scrollMagic/ScrollMagic.min.js"></script>
+	<script src="js/vendor/scrollMagic/debug.addIndicators.min.js"></script>
 	<script src="js/scripts.js"></script>
 	
 </head>
@@ -311,7 +314,8 @@
 		<div class="n-section4__bg">				
 		</div>
 		
-		<div class="n-section5">
+		<div id="trigger1"></div>
+		<div class="n-section5" id="pin1">
 			<div class="n-container">
 				<div class="n-header">
 					Здоровье
@@ -356,6 +360,25 @@
 										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
 									</div>
 								</div>
+							</div>
+							<div class="n-section5__sliderRight__block swiper-slide" data-pic="img/tmp/sl1.png">
+								<div class="n-section5__sliderRight__flow"></div>
+								<div class="n-section5__sliderRight__header">							
+									<div class="n-section5__sliderRight__inside">
+										Зачем нужно<br /> есть овощи?
+									</div>
+								</div>
+								<div class="n-section5__sliderRight__text">
+									<div class="n-section5__sliderRight__inside">
+										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
+										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
+									</div>
+								</div>
+								<div class="n-section5__sliderRight__bottom">
+									<div class="n-section5__sliderRight__inside">
+										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
+									</div>
+								</div>
 							</div>								
 						</div>											
 					</div>
@@ -365,104 +388,7 @@
 					</div>				
 				</div>
 				<!-- /.n-section5__sliderRight -->
-				<div class="n-section5__sliderRight sliderLeft">					
-					<div class="n-section5__sliderRight__container slider2">
-						<div class="n-section5__sliderRight__slide swiper-wrapper">
-							<div class="n-section5__sliderRight__block swiper-slide" data-pic="img/tmp/sl1.png">
-								<div class="n-section5__sliderRight__flow flow-mod"></div>
-								<div class="n-section5__sliderRight__header">							
-									<div class="n-section5__sliderRight__inside">
-										Какие овощи<br /> нужно есть?
-									</div>
-								</div>
-								<div class="n-section5__sliderRight__text">
-									<div class="n-section5__sliderRight__inside">
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-									</div>
-								</div>
-								<div class="n-section5__sliderRight__bottom">
-									<div class="n-section5__sliderRight__inside">
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-									</div>
-								</div>
-							</div>
-							<div class="n-section5__sliderRight__block swiper-slide" data-pic="img/tmp/sl2.png">
-								<div class="n-section5__sliderRight__flow flow-mod"></div>
-								<div class="n-section5__sliderRight__header">							
-									<div class="n-section5__sliderRight__inside">
-										Какие овощи<br /> нужно есть?
-									</div>
-								</div>
-								<div class="n-section5__sliderRight__text">
-									<div class="n-section5__sliderRight__inside">
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-									</div>
-								</div>
-								<div class="n-section5__sliderRight__bottom">
-									<div class="n-section5__sliderRight__inside">
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-									</div>
-								</div>
-							</div>								
-						</div>											
-					</div>
-					<div class="n-section5__sliderRight__pagination leftpag slider2pag"></div>		
-					<div class="n-section5__sliderRight__pic rightpic slider2pic">
-						<img src="img/tmp/sl2.png" alt="" />
-					</div>				
-				</div>
-				<div class="n-section5__sliderRight sliderMod">					
-					<div class="n-section5__sliderRight__container slider3">
-						<div class="n-section5__sliderRight__slide swiper-wrapper">
-							<div class="n-section5__sliderRight__block swiper-slide" data-pic="img/tmp/sl1.png">
-								<div class="n-section5__sliderRight__flow"></div>
-								<div class="n-section5__sliderRight__header">							
-									<div class="n-section5__sliderRight__inside">
-										Зачем нужно<br /> есть овощи?
-									</div>
-								</div>
-								<div class="n-section5__sliderRight__text">
-									<div class="n-section5__sliderRight__inside">
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-									</div>
-								</div>
-								<div class="n-section5__sliderRight__bottom">
-									<div class="n-section5__sliderRight__inside">
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-									</div>
-								</div>
-							</div>
-							<div class="n-section5__sliderRight__block swiper-slide" data-pic="img/tmp/sl2.png">
-								<div class="n-section5__sliderRight__flow"></div>
-								<div class="n-section5__sliderRight__header">							
-									<div class="n-section5__sliderRight__inside">
-										Зачем нужно<br /> есть овощи?
-									</div>
-								</div>
-								<div class="n-section5__sliderRight__text">
-									<div class="n-section5__sliderRight__inside">
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-									</div>
-								</div>
-								<div class="n-section5__sliderRight__bottom">
-									<div class="n-section5__sliderRight__inside">
-										Закрытые теплицы, которые зимой заняты под зеленый лук,  в летний период мы используем для выращивания  экзотических трав таких, как базилик, руккола, мята.
-									</div>
-								</div>
-							</div>								
-						</div>											
-					</div>
-					<div class="n-section5__sliderRight__pagination slider3pag"></div>		
-					<div class="n-section5__sliderRight__pic slider3pic">
-						<img src="img/tmp/sl1.png" alt="" />
-					</div>				
-				</div>
-				<!-- /.n-section5__sliderRight -->
-				<!-- /.n-section5__sliderRight -->
+
 			</div>
 		</div>
 		<!-- /.n-section5 -->
