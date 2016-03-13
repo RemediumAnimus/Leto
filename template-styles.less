@@ -126,7 +126,7 @@ i {
       right: 0;
       margin: auto;
       top: 17px;
-      .transition;
+      .transition (@attr:all, @time: 0.42s, @type: ease-in-out);
     }
     
     &:before {
@@ -139,7 +139,7 @@ i {
       right: 0;
       margin: auto;
       bottom: 17px;
-      .transition;
+      .transition (@attr:all, @time: 0.42s, @type: ease-in-out);
     }
     
     &__line {
@@ -152,7 +152,7 @@ i {
       right: 0;
       bottom: 0;
       margin: auto;
-      .transition;
+      .transition (@attr:all, @time: 0.42s, @type: ease-in-out);
     }
   }//burger
   
@@ -276,10 +276,13 @@ i {
 }
 .n-mob-list {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  //height: 100%;
+  //position: absolute;
+  position: fixed;
   left: 0;
   top: 48px;
+  bottom: 0;
+  overflow: auto;
   text-align: center;
   background: #fff;
   z-index: 200;
@@ -1142,6 +1145,11 @@ i {
   -moz-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.10);
   -ms-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.10);*/
  //display: none;
+ display: block;
+ 
+ @media all and (max-width: 760px) {
+   display: none !important;
+ }
   
   .n-container {
     &:after {
@@ -1155,6 +1163,7 @@ i {
     margin-top: 7px;
     position: relative;
     margin-bottom: 20px;
+   // width: 60%;      
     
     &:before {
       .blocky;
@@ -1202,6 +1211,17 @@ i {
   position: fixed;
   padding-top: 20px;
   top: 0;
+  
+  @media all and (max-width: 1300px) {
+     width: 50%;
+     margin-top: -10px;
+     
+     .n-section3__menu {
+       &:before {
+         top: 9px;
+       }
+     }
+  }
 }
 
 .n-section4 {

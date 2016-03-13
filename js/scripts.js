@@ -55,15 +55,16 @@ $(document).ready(function() {
 		    		$('#page').css('height',parseInt($window.find('.n-mob__container').outerHeight()+100));	
 		    		$('.parallax-mirror').hide();
 					$('.sections').hide();
-					$('.n-mob-menu').css('position','absolute');
-					$('html, body').animate({scrollTop:0},300);    		
+					//$('.n-mob-menu').css('position','absolute');
+					$('html, body').css({'overflow':'hidden'});    		
 		    	});    	
 	  	} else {
 	  		$('.parallax-mirror').show();
 			$('.sections').show();
 	  		$window.animate({'left':'-100%'},'300',function(){
 	  			$window.css('visibility','hidden');
-	  			$('.n-mob-menu').css('position','fixed');   			  			
+	  			$('.n-mob-menu').css('position','fixed');
+	  			$('html, body').css({'overflow':'visible'});   			  			
 	  		});
 	  		$('#page').css('height','auto'); 
 	  	};
