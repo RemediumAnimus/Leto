@@ -20,7 +20,7 @@
     <!-- Scripts -->    
 	<script src="js/vendor/jquery.min.js"></script>
 	<script src="js/vendor/bowser.js"></script>
-	<script src="js/vendor/modernizr.custom.js"></script>
+	
 	<script src="js/vendor/fastclick.js"></script>
 	<script src="js/vendor/swiper/swiper.jquery.min.js"></script>
 	<script src="js/vendor/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
@@ -34,10 +34,40 @@
 </head>
 
 <body>
-
+	<div id="mobile-indicator"></div>
+	
 	<div id="page">
+		<div class="n-mob-menu">
+			<div class="burger">
+				<div class="burger__line"></div>
+			</div>
+			<div class="phone"></div>
+			<div class="number">
+				<span>
+					+7 (967)  869-07-51
+				</span>
+			</div>			
+		</div>
+		<!-- /.n-mob-menu -->
 		
-		<div class="n-section1">
+		<div class="n-mob-list mobpop">
+			<div class="n-mob__container">
+				<div class="n-mob-list__pic">
+					<img src="img/mob-logo.png" alt="" />
+				</div>
+				<ul>
+					<li><a href="#"><span>Наши возможности</span></a></li>
+					<li><a href="#"><span>Производство</span></a></li>
+					<li><a href="#"><span>Здоровье</span></a></li>
+					<li><a href="#"><span>Наша продукция</span></a></li>
+					<li><a href="#"><span>Нам доверяют</span></a></li>
+				</ul>
+				<a href="#" class="n-btn">
+					Обратный звонок
+				</a>
+			</div>
+		</div>
+		<div class="n-section1 sections">
 			<div class="n-container">
 				<div class="n-section1__header">
 					<ul>
@@ -78,7 +108,7 @@
 								</span>
 							</div>
 							<div class="n-section1__slide__pic">
-								<img src="img/tmp/pic1.png" alt="" />
+								<img src="img/tmp/pic4.png" alt="" />
 							</div>
 						</div>
 						<div class="n-section1__slide swiper-slide">
@@ -121,7 +151,7 @@
 		</div>
 		<!-- /.section1 -->
 		
-		<div class="n-section2">
+		<div class="n-section2 sections">
 			<div class="n-section2__bg">				
 			</div>
 			<div class="n-section2__wrap">
@@ -227,7 +257,7 @@
 		</div>
 		<!-- /.n-section2 -->
 		
-		<div class="n-section3">
+		<div class="n-section3 sections">
 			<div class="n-container">
 				<div class="n-section3__menu">
 					<ul>
@@ -248,7 +278,7 @@
 		</div>
 		<!-- /.n-section3 -->
 		
-		<div class="n-section4">
+		<div class="n-section4 sections">
 			<div class="n-container">
 				<div class="n-section4__top">
 					<div class="n-header">
@@ -315,7 +345,7 @@
 		</div>
 		
 		<div id="trigger1"></div>
-		<div class="n-section5" id="pin1">
+		<div class="n-section5 sections" id="pin1">
 			<div class="n-container">
 				<div class="n-header">
 					Здоровье
@@ -397,7 +427,7 @@
 			
 		</div>
 		
-		<div class="n-section6">
+		<div class="n-section6 sections">
 			<div class="n-container">
 				<div class="n-header">
 					Продукция 
@@ -535,7 +565,7 @@
 			
 		</div>
 		
-		<div class="n-section7">
+		<div class="n-section7 sections">
 			<div class="n-container">
 				<div class="n-section7__top">
 					<div class="n-section7__top__l">
@@ -682,7 +712,7 @@
 		</div>
 		<!-- /.n-section7 -->
 		
-		<div class="n-section8">
+		<div class="n-section8 sections">
 			<div class="n-container">
 				<div class="n-header">
 					<span>Благодарственные <br /></span> 
@@ -775,7 +805,7 @@
 			
 		</div>
 		
-		<div class="n-footer">
+		<div class="n-footer sections">
 			<div class="n-footer__top">
 				<div class="n-container">
 					<div class="n-footer__list">
