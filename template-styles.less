@@ -430,17 +430,65 @@ i {
 
 .n-modal {
   position: fixed;
-  height: 100%;
+  //height: 100%;
   top: 0;
+  bottom: 0px;
   right: 0;
+  overflow-y: auto;
   z-index: 9999;
-  max-width: 460px;
-  background: #fff;
+  max-width: 560px; 
   right: -550px;
-  box-shadow: 0px 12px 147px 0px rgba(0, 0, 0, 0.57);
-  -ms-box-shadow: 0px 12px 147px 0px rgba(0, 0, 0, 0.57);
-  -webkit-box-shadow: 0px 12px 147px 0px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: 0px 12px 147px 0px rgba(0, 0, 0, 0.57);
+  min-width: 320px;
+  
+  @media all and (max-width: 500px) {
+    max-width: 100%;
+  }
+  
+  &__container {
+    margin-left: 100px;
+    position: relative;
+    z-index: 1;
+    
+    @media all and (max-width: 500px) {
+      margin-left: 0;
+    }
+  }
+  
+  &__inside {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: 100px;
+    background: #fff;
+    box-shadow: 0px 12px 147px 0px rgba(0, 0, 0, 0.57);
+    -ms-box-shadow: 0px 12px 147px 0px rgba(0, 0, 0, 0.57);
+    -webkit-box-shadow: 0px 12px 147px 0px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 12px 147px 0px rgba(0, 0, 0, 0.57);
+    
+    @media all and (max-width: 500px) {
+      margin-left: 0;
+    }
+  }
+  
+  &__point {
+    width: 100px;
+    height: 100px;
+    background: @green;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -50px;
+    right: 30px;
+    text-align: center;   
+    
+    span {
+      font-size: 15px;
+      font-family: @sans-bold;
+      line-height: 100px;
+      color: #fff;
+    }
+  }
   
   &__close {
     width: 42px;
@@ -470,6 +518,7 @@ i {
   }
   
   &__pic {
+    position: relative;
     img {
       width: 100%;
     }
@@ -484,12 +533,16 @@ i {
     font-size: 30px;
     color: @green;
     margin-bottom: 35px;
+    
+    @media all and (max-width: 500px) {
+      padding-top: 30px;
+    }
   }
   
   &__text {
     line-height: 27px;
     font-size: 14px;
-    margin-bottom: 32px;
+    margin-bottom: 32px;      
   }
   
   &__list {
@@ -531,8 +584,12 @@ i {
   
      
   .n-container {
-    padding-top: 20px;
+    padding-top: 64px;
     position: relative;
+    
+    @media all and (max-width: 1360px) {
+      margin-left: 30px;
+    }
   }
   
   &__header {   
@@ -726,7 +783,7 @@ i {
     top: 205px;
     left: -186px;
     cursor: pointer;
-    z-index: 20;
+    z-index: 20;       
     
     &:after {
       .blocky;
@@ -740,8 +797,8 @@ i {
       right: 0;
     }
     
-    @media all and (max-width: 1460px) {
-      left: -110px;
+    @media all and (max-width: 1360px) {
+      left: -120px;
     }
     
     @media all and (max-width: 768px) {
@@ -762,7 +819,7 @@ i {
     top: 205px;       
     right: -186px;
     cursor: pointer;
-    z-index: 20;
+    z-index: 20;        
     
     &:after {
       .blocky;
@@ -776,9 +833,9 @@ i {
       left: 0;
     }
     
-    @media all and (max-width: 1460px) {
-      right: -110px;
-    }
+    @media all and (max-width: 1360px) {
+      right: -100px;
+    }     
     
     @media all and (max-width: 768px) {
       display: none;
@@ -911,6 +968,26 @@ i {
     }
   }
 }//section1
+
+.tofix {
+  position: fixed;
+  z-index: 300;
+  top: 0px;
+  right: 0;
+  width: 100%;
+  background: rgba(255,255,255,0);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .transition (@attr:all, @time: 1s, @type: ease-in-out);
+  
+  .rs {
+    float: right;
+  }
+}
+
+.tofix-active {
+  background: rgba(255,255,255,1);
+}
 
 
 .swiper-button-disabled {
@@ -1055,13 +1132,16 @@ i {
 
 .n-section3 {
   position: relative;
-  z-index: 10;
-  background: #fff;
+  float: left;
+  width: 100%;
+  top: 0;
+  z-index: 301;
   padding-top: 17px;
   /*box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.10);
   -webkit-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.10);
   -moz-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.10);
   -ms-box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.10);*/
+ //display: none;
   
   .n-container {
     &:after {
@@ -1118,11 +1198,17 @@ i {
   }
 }//section3
 
+.tofix2 {
+  position: fixed;
+  padding-top: 20px;
+  top: 0;
+}
+
 .n-section4 {
   background: #fff;
   position: relative;
   z-index: 10;
-  
+  margin-top: 150px; 
   
   &__top {
     &:after {
