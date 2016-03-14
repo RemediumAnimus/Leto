@@ -2301,6 +2301,14 @@ i {
   position: relative;
   z-index: 10;
 }
+.n-footer .tohide {
+  display: none;
+}
+@media all and (max-width: 768px) {
+  .n-footer .tohide {
+    display: block;
+  }
+}
 .n-footer .n-section6__btn {
   margin: 0px -20px;
   padding-bottom: 10px;
