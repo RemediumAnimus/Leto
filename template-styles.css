@@ -2044,6 +2044,11 @@ i {
     padding-bottom: 28px;
   }
 }
+@media all and (max-width: 768px) {
+  .n-section8__container {
+    display: block;
+  }
+}
 .n-section8 .tohide {
   display: none;
 }
@@ -2079,6 +2084,11 @@ i {
 }
 .n-section8__slider__container {
   overflow: hidden;
+}
+@media all and (max-width: 768px) {
+  .n-section8__slider__container {
+    overflow: visible;
+  }
 }
 .n-section8__slide:after {
   clear: both;

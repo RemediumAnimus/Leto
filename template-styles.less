@@ -2180,6 +2180,12 @@ i {
     padding-bottom: 28px;
   }
   
+  &__container {
+    @media all and (max-width: 768px) {
+      display: block; 
+    }
+  }
+  
   .tohide {
     display: none;
     @media all and (max-width: 768px) {
@@ -2210,6 +2216,10 @@ i {
     
     &__container {
       overflow: hidden;
+      
+      @media all and (max-width: 768px) {
+        overflow: visible;
+      }
     }
   }
   &__slide {
