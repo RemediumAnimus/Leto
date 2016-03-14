@@ -264,9 +264,9 @@ $(document).ready(function() {
   	nextButton: '.slider2_2-r',
     prevButton: '.slider2_2-l',   
     breakpoints: {
-    	440: {
+    	/*440: {
 	      slidesPerView: 1,
-	    },
+	    },*/
     	600: {
 	      slidesPerView: 2,
 	    },	
