@@ -72,6 +72,10 @@ $(document).ready(function() {
  	$(this).toggleClass('burger-active');
  	windowOpen($('.n-mob-list'));
  });
+ 
+ $('.phone').click(function(){
+ 	windowOpen($('.n-phone')); 	
+ });
 
  var effectReady = false;
  var effectTimer;
@@ -471,6 +475,16 @@ $(document).ready(function() {
   		$('.n-section3').removeClass('tofix2');
   	}
   }
+  
+  document.body.onclick = function(e) {
+      e = e || window.event;
+      var target = e.target || e.srcElement;
+      
+      if ( (" " + target.className + " ").replace(/[\n\t]/g, " ").indexOf("n-modal") < 0 && (" " + target.parentNode.className + " ").replace(/[\n\t]/g, " ").indexOf("n-section2__slide__container") < 0) {     
+          $('.n-modal').stop().animate({'right':570 * -1},700,'easeInOutCubic');  
+          $('.n-modal').removeClass('pop-active');    	
+      }
+  };
   
   $(document).on('scroll',function(){
   	fixMenu();	
